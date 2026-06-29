@@ -1,0 +1,65 @@
+body {
+  margin: 0;
+}
+
+.container {
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+}
+
+.left {
+  flex: 1;
+  background-color: #121212;
+  display: flex;
+  align-items: center;     /* centers vertically */
+  justify-content: center; /* centers horizontally */
+  font-family: 'Inter', 'Helvetica Neue', Arial, sans-serif;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: clamp(1.25rem, 2.5vw, 2rem);
+  font-weight: 400;
+  letter-spacing: -0.01em;
+  line-height: 1.2;
+  margin: 0;
+  color: #ffffff;
+}
+
+.left-content {
+  width: 60%;
+}
+
+.subtext {
+  color: #888888;
+}
+
+.left-heading {
+  color: #a8d8ff;
+}
+
+.left-text {
+  font-size: 0.75rem;
+  line-height: 1.5;
+}
+
+.head-style {
+  display: block;
+  margin-bottom: 0.5rem; /* controls the gap, adjust as needed */
+  color: #a0a0a0;
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+.work-heading {
+  display: block;
+  margin-bottom: 0.5rem; /* controls the gap, adjust as needed */
+  color: #a8d8ff;
+  font-size: 1rem;
+  font-weight: 400;
+}
+
+.right {
+  flex: 1;
+  background: linear-gradient(to right, #2c4a6e, #f5f5dc);
+}
