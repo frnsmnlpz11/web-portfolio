@@ -12,8 +12,11 @@ a {
   color: inherit;
 }
 
-.links,
 a:visited {
+  color: inherit;
+}
+
+.links {
   color: #888888;
   display: flex;
   gap: 0.5rem;
@@ -72,6 +75,34 @@ a:visited {
 .right {
   flex: 1;
   background: linear-gradient(to right, #2c4a6e, #f5f5dc);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.in-progress {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.in-progress-icon {
+  font-size: 3rem;
+  animation: spin 3s linear infinite;
+}
+
+.in-progress-text {
+  color: rgba(255, 255, 255, 0.6);
+  font-family: 'Inter', 'Helvetica Neue', Arial, sans-serif;
+  font-size: 0.875rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
 }
 
 /* ── Tablet / Large phones ── */
