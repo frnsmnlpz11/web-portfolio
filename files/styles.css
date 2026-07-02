@@ -8,17 +8,23 @@ body {
   width: 100vw;
 }
 
+.links,
+a:visited {
+  color: #888888;
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+}
+
 .left {
   flex: 1;
   background-color: #121212;
   display: flex;
-  align-items: center;     /* centers vertically */
-  justify-content: center; /* centers horizontally */
-  font-family: 'Inter', 'Helvetica Neue', Arial, sans-serif;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: clamp(1.25rem, 2.5vw, 2rem);
+  font-family: 'Inter', 'Helvetica Neue', Arial, sans-serif;
+  flex-direction: column;
+  font-size: clamp(0.875rem, 1.5vw, 1.25rem);
   font-weight: 400;
   letter-spacing: -0.01em;
   line-height: 1.2;
@@ -45,7 +51,7 @@ body {
 
 .head-style {
   display: block;
-  margin-bottom: 0.5rem; /* controls the gap, adjust as needed */
+  margin-bottom: 0.5rem;
   color: #a0a0a0;
   font-size: 1rem;
   font-weight: 700;
@@ -53,7 +59,7 @@ body {
 
 .work-heading {
   display: block;
-  margin-bottom: 0.5rem; /* controls the gap, adjust as needed */
+  margin-bottom: 0.5rem;
   color: #a8d8ff;
   font-size: 1rem;
   font-weight: 400;
@@ -62,4 +68,48 @@ body {
 .right {
   flex: 1;
   background: linear-gradient(to right, #2c4a6e, #f5f5dc);
+}
+
+/* ── Tablet / Large phones ── */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    height: auto;
+    min-height: 100vh;
+  }
+
+  .left {
+    order: 2;
+    padding: 3rem 1.5rem;
+    font-size: clamp(1rem, 4vw, 1.5rem);
+  }
+
+  .left-content {
+    width: 90%;
+  }
+
+  .right {
+    order: 1;
+    min-height: 50vh;
+    background: linear-gradient(to bottom, #2c4a6e, #f5f5dc);
+  }
+}
+
+/* ── Small phones ── */
+@media (max-width: 480px) {
+  .left {
+    padding: 2rem 1rem;
+  }
+
+  .left-content {
+    width: 95%;
+  }
+
+  .head-style {
+    font-size: 0.875rem;
+  }
+
+  .left-text {
+    font-size: 0.7rem;
+  }
 }
